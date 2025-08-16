@@ -7,7 +7,7 @@ import authRouter from './routes/authRoutes.js';
 import userRouter from './routes/userRoutes.js';
 
 const app = express();
-const allowedOrigins = ['https://mern-authentication-weld-gamma.vercel.app/','https://mern-authentication-git-master-mahesh-khatiks-projects.vercel.app/']
+const allowedOrigins = process.env.ALLOWED_ORIGINS
 const port = process.env.PORT || 5000
 app.use(express.json());
 app.use(cookieParser())
